@@ -42,10 +42,10 @@ and also the external environments (global and user) will not affect it
 (this environment will only inherit very basic packages,
 mostly ghc and Cabal and their deps).
 
-When you're done working with this environment, enter command 'deactivate',
-or just close the current shell (with exit).
+When you're done working with this environment, enter command
+'virthualenv_deactivate', or just close the current shell (with exit).
 
-> deactivate
+> virthualenv_deactivate
 
 Advanced usage
 --------------
@@ -143,7 +143,7 @@ Q: Can I use it with a different haskell package repository than hackage?
 A: Yes, just adjust the url in .virthualenv/cabal/config file.
 
 Q: How do I remove the whole virtual environment?  
-A: If it's activated - 'deactivate' it. Then, delete
+A: If it's activated - 'virthualenv_deactivate' it. Then, delete
    the .virthualenv/ directory.
 
 Q: Is every environment completely separate from other environments and
