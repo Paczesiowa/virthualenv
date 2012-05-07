@@ -10,11 +10,8 @@
 (defun virthualenv-activate (dir)
   "Activate the Virtual Haskell Environment in DIR"
   (interactive "Dvirthualenv directory: ")
-  (when (equal (char-list-to-string (last (string-to-list dir)))
-               "/")
-    (setq dir (subseq dir
-                      0
-                      (- (length dir) 1))))
+  (when (string-match "^.*/$" dir)
+    (setq dir (substring dir 0 -1)))
   (let* ((virthualenv-dir (concat dir "/.virthualenv/"))
          (path-var-prependix-location (concat virthualenv-dir "path_var_prependix"))
          (ghc-package-path-var-location (concat virthualenv-dir "ghc_package_path_var"))
