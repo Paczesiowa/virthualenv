@@ -13,7 +13,7 @@ main :: IO ()
 main = do
     args <- getArgs
     case args of
-      ["--version"] -> putStrLn "0.2"
+      ["--version"] -> putStrLn "0.2.1"
       ["--help"] -> usage
       ["-h"]     -> usage
       _          ->
