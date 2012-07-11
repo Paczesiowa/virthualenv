@@ -1,5 +1,13 @@
 Virtual Haskell Environment
 ===========================
+Note on new version
+-------------------
+virtualhenv has been renamed to hsenv.
+
+See https://github.com/Paczesiowa/hsenv for the current project.
+
+It will soon be released to HackageDB (https://github.com/Paczesiowa/hsenv/issues/26).
+
 
 What is it?
 -----------
