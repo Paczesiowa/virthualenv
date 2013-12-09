@@ -11,9 +11,10 @@ import Args (usage, parseArgs)
 
 main :: IO ()
 main = do
+    hPutStrLn stderr "virthualenv is deprecated, please use the hsenv tool."
     args <- getArgs
     case args of
-      ["--version"] -> putStrLn "0.2.1"
+      ["--version"] -> putStrLn "0.2.2"
       ["--help"] -> usage
       ["-h"]     -> usage
       _          ->

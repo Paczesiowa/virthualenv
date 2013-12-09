@@ -1,10 +1,12 @@
 Name:                virthualenv
 
-Version:             0.2.1
+Version:             0.2.2
 
 Synopsis:            Virtual Haskell Environment builder
 
 Description:         virthualenv is a tool (inspired by Python's virtualenv) to create isolated Haskell environments.
+                     .
+                     virthualenv is deprecated, please use the hsenv tool.
                      .
                      It creates a sandboxed environment in a .virthualenv/ directory, which, when activated,
                      allows you to use regular Haskell tools (ghc, ghci, ghc-pkg, cabal) to manage your Haskell

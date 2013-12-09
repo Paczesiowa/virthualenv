@@ -1,6 +1,8 @@
 Virtual Haskell Environment
 ===========================
 
+virthualenv is deprecated, please use the hsenv tool.
+
 What is it?
 -----------
 virthualenv is a tool (inspired by Python's virtualenv)
