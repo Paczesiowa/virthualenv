@@ -16,12 +16,13 @@ import System.IO (hGetContents, hPutStr, hFlush, hClose, openTempFile)
 import System.Exit (ExitCode)
 import Data.List.Split (splitOn)
 import Control.Monad (foldM)
+import Control.Monad.Error (catchError)
 import System.FilePath ((</>))
 
 -- Computation getEnvVar var returns Just the value of the environment variable var,
 -- or Nothing if the environment variable does not exist
 getEnvVar :: String -> IO (Maybe String)
-getEnvVar var = Just `fmap` getEnv var `catch` noValueHandler
+getEnvVar var = Just `fmap` getEnv var `catchError` noValueHandler
     where noValueHandler e | isDoesNotExistError e = return Nothing
                            | otherwise             = ioError e
 
