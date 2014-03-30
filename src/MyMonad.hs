@@ -33,7 +33,7 @@ newtype MyMonad a = MyMonad (StateT MyState (ReaderT Options (ErrorT MyException
 
 instance MonadIO MyMonad where
     liftIO m = MyMonad $ do
-                 x <- liftIO $ (Right `fmap` m) `catch` (return . Left)
+                 x <- liftIO $ (Right `fmap` m) `catchError` (return . Left)
                  case x of
                    Left e  -> throwError $ MyException $ "IO error: " ++ show e
                    Right y -> return y
